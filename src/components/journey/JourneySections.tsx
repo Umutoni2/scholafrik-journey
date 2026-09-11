@@ -20,7 +20,7 @@ export function JourneyHero({ data, onEnter }: { data: JourneyData; onEnter: () 
         <p className="journey-hero__tagline">{data.heroTagline}</p>
         <figure className="journey-portrait">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBasePath("/journey/sylvie-portrait.png?v=2")} alt={data.meta.name} />
+          <img src={withBasePath("/journey/sylvie-portrait.png?v=6")} alt={data.meta.name} />
         </figure>
         <p className="journey-hero__name">{data.meta.name}</p>
         <p className="journey-hero__role">
