@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My ScholAfrik Journey — Certificate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background: #2a1500;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: #391e00;
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 920px;
+      aspect-ratio: 1.414 / 1;
+      background:
+        radial-gradient(ellipse 80% 60% at 12% 18%, rgba(221, 186, 95, 0.18), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 88% 82%, rgba(206, 128, 18, 0.12), transparent 50%),
+        linear-gradient(165deg, #f7f1e8 0%, #efe4d4 48%, #f4ebe0 100%);
+      position: relative;
+      padding: clamp(1.75rem, 4vw, 3rem);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Hand-drawn feel: slightly uneven double border */
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1.5px solid #391e00;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .sheet::after {
+      content: "";
+      position: absolute;
+      inset: 20px 22px 18px 18px;
+      border: 1px solid rgba(206, 128, 18, 0.55);
+      pointer-events: none;
+    }
+
+    .inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 3vw, 2rem);
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8a5a1a;
+      font-weight: 600;
+    }
+
+    .brand {
+      margin-top: 0.55rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #391e00;
+    }
+
+    .brand span {
+      color: #ce8012;
+    }
+
+    .rule {
+      width: 72px;
+      height: 2px;
+      background: #ce8012;
+      margin: 0.9rem auto 0.75rem;
+      transform: rotate(-0.6deg);
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      max-width: 16ch;
+    }
+
+    .subtitle {
+      margin-top: 0.55rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      color: #5c3d2e;
+      font-weight: 500;
+    }
+
+    .body-copy {
+      max-width: 38rem;
+      margin: 1.1rem auto 0;
+      font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+      line-height: 1.65;
+      color: #4a3528;
+    }
+
+    .name {
+      margin-top: 1.15rem;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.85rem, 4vw, 2.55rem);
+      font-weight: 700;
+      color: #391e00;
+      border-bottom: 1.5px solid rgba(206, 128, 18, 0.65);
+      padding-bottom: 0.2rem;
+      display: inline-block;
+    }
+
+    .role {
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a5a3a;
+      font-weight: 600;
+    }
+
+    .path {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem 0.65rem;
+      margin-top: 1.25rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #5c3d2e;
+      font-weight: 600;
+    }
+
+    .path span:not(.dot) {
+      padding: 0.28rem 0.65rem;
+      border: 1px solid rgba(57, 30, 0, 0.22);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .path .dot {
+      align-self: center;
+      color: #ce8012;
+      letter-spacing: 0;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      margin-top: 1rem;
+      max-width: 34rem;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: #6b5344;
+      font-style: italic;
+    }
+
+    .footer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      align-items: end;
+      margin-top: 1.35rem;
+      padding-top: 0.5rem;
+    }
+
+    .sig {
+      text-align: left;
+    }
+
+    .sig.center { text-align: center; }
+    .sig.right { text-align: right; }
+
+    .sig-line {
+      width: 100%;
+      max-width: 160px;
+      border-bottom: 1px solid rgba(57, 30, 0, 0.45);
+      margin-bottom: 0.35rem;
+      height: 1.6rem;
+    }
+
+    .sig.center .sig-line { margin-left: auto; margin-right: auto; }
+    .sig.right .sig-line { margin-left: auto; }
+
+    .sig-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a5a3a;
+    }
+
+    .year-mark {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #ce8012;
+      line-height: 1;
+    }
+
+    .actions {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .actions button {
+      border: none;
+      background: #ce8012;
+      color: #fff;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .actions button:hover { background: #b86f0f; }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        min-height: auto;
+      }
+      .sheet {
+        box-shadow: none;
+        max-width: none;
+        width: 100%;
+        height: 100vh;
+        aspect-ratio: auto;
+      }
+      .actions { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .sheet { aspect-ratio: auto; min-height: 560px; }
+      .footer { grid-template-columns: 1fr; gap: 1.1rem; text-align: center; }
+      .sig, .sig.right { text-align: center; }
+      .sig-line, .sig.right .sig-line { margin-left: auto; margin-right: auto; }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet" aria-label="ScholAfrik journey certificate">
+    <div class="inner">
+      <header>
+        <p class="eyebrow">Digital Internship Artifact</p>
+        <p class="brand">Schol<span>Afrik</span></p>
+        <div class="rule" aria-hidden="true"></div>
+        <h1>My ScholAfrik Journey</h1>
+        <p class="subtitle">From Learning to Building</p>
+      </header>
+
+      <section>
+        <p class="body-copy">
+          This marks a journey that began before the official clock —
+          early experience, real work, and growth into a more confident front-end developer.
+        </p>
+
+        <p class="name">Umutoni Rutaganira Sylvie</p>
+        <p class="role">Front-End Developer Intern · 2026</p>
+
+        <div class="path" aria-label="Journey stages">
+          <span>Started early</span>
+          <span class="dot">→</span>
+          <span>Official internship</span>
+          <span class="dot">→</span>
+          <span>More responsibility</span>
+          <span class="dot">→</span>
+          <span>Growth</span>
+        </div>
+
+        <p class="note">
+          “I started before the clock.” Evidence of learning, building, facing challenges,
+          and becoming someone who investigates, solves, and asks for help when it matters.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <div class="sig">
+          <div class="sig-line"></div>
+          <p class="sig-label">Intern</p>
+        </div>
+        <div class="sig center">
+          <p class="year-mark">2026</p>
+          <p class="sig-label" style="margin-top: 0.35rem;">Internship Year</p>
+        </div>
+        <div class="sig right">
+          <div class="sig-line"></div>
+          <p class="sig-label">Supervisor / Mentor</p>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <div class="actions">
+    <button type="button" onclick="window.print()">Print / Save PDF</button>
+  </div>
+</body>
+</html>
