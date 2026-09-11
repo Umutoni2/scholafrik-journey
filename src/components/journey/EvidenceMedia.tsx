@@ -4,7 +4,7 @@ import { FileLock2, ImageIcon, Link2 } from "lucide-react";
 
 const STATUS_LABEL: Record<EvidenceStatus, string> = {
   private: "Private Evidence — Available for Academic Review",
-  pending: "Media placeholder — add your file when ready",
+  pending: "Media not included",
   public: "Approved evidence",
 };
 

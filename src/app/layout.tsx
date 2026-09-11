@@ -18,7 +18,7 @@ const sans = Outfit({
 export const metadata: Metadata = {
   title: "My ScholAfrik Journey | Umutoni Rutaganira Sylvie",
   description:
-    "A standalone digital internship experience — from early ScholAfrik work to professional growth as a Front-End Developer Intern.",
+    "My internship journey at ScholAfrik — from early frontend work to professional growth as a Front-End Developer Intern.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

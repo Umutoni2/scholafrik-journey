@@ -1,14 +1,5 @@
 import type { JourneyData } from "@/types/journey";
 
-/**
- * Content sourced from:
- * Sylie Umutoni Rutaganira | Logbook | Skills Immersion 1 | 2025 Oct Term
- * (COVER PAGE + WEEK 1–7)
- *
- * Edit this file to refine wording. Put approved media under /public/journey/
- * and set evidence status to "public" with a src path.
- * Never paste private ScholAfrik source code here.
- */
 export const journeyData: JourneyData = {
   meta: {
     title: "My ScholAfrik Journey",

@@ -1,8 +1,8 @@
 # My ScholAfrik Journey
 
-Standalone digital internship experience for **Umutoni Rutaganira Sylvie**.
+Digital internship experience by **Umutoni Rutaganira Sylvie**, Frontend Developer Intern at ScholAfrik.
 
-This app is independent of the main ScholAfrik product (no login, feed, scholarships, or NextAuth). The journey is the whole site and opens at `/`.
+Skills Immersion 1 · 2025–2026
 
 ## Run locally
 
@@ -11,9 +11,4 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3003](http://localhost:3003).
-
-## Edit content
-
-- Story, weeks, and evidence: `src/constants/journeyData.ts`
-- Media: `public/journey/`
+Then open http://localhost:3003
